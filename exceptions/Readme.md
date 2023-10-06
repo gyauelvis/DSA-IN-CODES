@@ -39,6 +39,8 @@ block, the exception must be thrown in the try block.
 14. The general syntax to throw an exception is
  ```c++
  throw expression;
+ ```
+ 
 in which `expression` is a constant value, variable, or object. The object 
 being thrown can be either a specific object or an anonymous object.
 
@@ -47,15 +49,50 @@ being thrown can be either a specific object or an anonymous object.
 16. The class exception is the base class of the exception classes provided 
 by C++.
 17. The function what returns the string containing the exception object 
-thrown by C11’s built-in exception classes.
- The class exception is contained in the header file exception.
- The two classes that are immediately derived from the class exception 
+thrown byC++’s built-in exception classes.
+18. The class exception is contained in the header file exception.
+19. The two classes that are immediately derived from the class exception 
 are logic_error and runtime_error. Both of these classes are defined in 
 the header file stdexcept.
- The class invalid_argument is designed to deal with illegal arguments 
+20. The class invalid_argument is designed to deal with illegal arguments 
 used in a function call.
- The class out_of_range deals with the string subscript out_of_range error.
- If a length greater than the maximum allowed for a string object is used, 
+21. The class out_of_range deals with the string subscript out_of_range error.
+22. If a length greater than the maximum allowed for a string object is used, 
 the class length_error deals with this error.
- If the operator new cannot allocate memory space, this operator throws a 
+23. If the operator new cannot allocate memory space, this operator throws a 
 bad_alloc exception.
+
+24. The class runtime_error is designed to deal with errors that can be 
+detected only during program execution. For example, to deal with arith
+metic overflow and underflow exceptions, the classes overflow_error 
+and underflow_error are derived from the class runtime_error.
+25. A catch block typically handles the exception or partially processes the 
+exception and then either rethrows the same exception or rethrows another 
+exception in order for the calling environment to handle the exception.
+26. C++ enables programmers to create their own exception classes to handle 
+both the exceptions not covered by C++’s exception classes and their own 
+exceptions.
+27. C++ uses the same mechanism to process the exceptions you define as it 
+uses for built-in exceptions. However, you must throw your own exceptions 
+using the throw statement.
+28. In C++, any class can be considered an exception class. It need not be 
+inherited from the class exception. What makes a class an exception is 
+how it is used.
+ The general syntax to rethrow an exception caught by a catch block is
+ ```c++
+ throw;
+ ```
+ (in this case, the same exception is rethrown) or
+ throw expression;
+ in which expression is a constant value, variable, or object. The object 
+being thrown can be either a specific object or an anonymous object.
+29. A function specifies the exceptions it throws in its heading using the throw 
+clause.
+30. When an exception is thrown in a function, the function can do the follow
+ing: do nothing; partially process the exception and throw the same excep
+tion or a new exception; or throw a new exception. In each of these cases, 
+the function call stack is unwound so that the exception can be caught in the 
+next try/catch block. The stack unwinding continues until a try/catch 
+handles the exception or the program does not handle the exception.
+31. If the program does not handle the exception, then the function terminate 
+is called to terminate the program
