@@ -1,8 +1,11 @@
 #include <iostream>
-int linear_search(int array[], int value, int length_array) {
-    for (int i = 0; i < length_array;i++) {
-        if(array[i] == value){
+
+int linear_search(int array[], int  value, int length){
+    for(int i=0;i<length;i++){
+        if(array[i]==value){
             return i;
+        }else if(array[i]>value){
+            break;
         }
     }
     return -1;
