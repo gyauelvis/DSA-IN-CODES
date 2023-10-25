@@ -4,68 +4,68 @@ let hashing = {
     R: 18, S: 19, T: 20, U: 21, V: 22, W: 23, X: 24, Y: 25, Z: 26
 }
 
-// takes the key multiplies them and returns the value
-let hashFunction = (key) =>{
-    let value = 1;
-    typeof key === 'string' ? key = key.toUpperCase() : key;
-    for(let i = 0; i < key.length; i++){
-        value = value * hashing[key[i]];
+class HashTable {
+    constructor(storage = []){
+        this.storage = storage;
     }
-    return value;
-}
 
-
-let hashTable = {
-    storage: storage = [],
+    // takes the key multiplies them and returns the value
+    hashFunction (key){
+        let value = 1;
+        typeof key === 'string' ? key = key.toUpperCase() : key;
+        for(let i = 0; i < key.length; i++){
+            value = value * hashing[key[i]];
+        }
+        return value;
+    }
 
     add (key, value) {
-        let indexOfValue = hashFunction(key);
-        if(hashTable.storage[indexOfValue] === undefined){
-            hashTable.storage[indexOfValue] = {[key] : value}
+        let indexOfValue = this.hashFunction(key);
+        if(this.storage[indexOfValue] === undefined){
+            this.storage[indexOfValue] = {[key] : value}
         }else{
             // there is already a value, we take the value, add the nex one in array
-            hashTable.storage[indexOfValue] = [hashTable.storage[indexOfValue], {[key]:value}];
+            this.storage[indexOfValue] = [this.storage[indexOfValue], {[key]:value}];
         }
-        return hashTable.storage;
-    },
+        return this.storage;
+    }
+
     print(){
-        console.log(hashTable.storage);
-    },
+        console.log(this.storage);
+    }
+
     remove(key){
-        let index = hashFunction(key);
-        if(hashTable.storage[index] === undefined){
+        let index = this.hashFunction(key);
+        if(this.storage[index] === undefined){
             return undefined;
         }else{
-            if(hashTable.storage[index].length === undefined) {
-                hashTable.storage.pop(index);
+            if(this.storage[index].length === undefined) {
+                this.storage.pop(index);
             }else{
                 let index_ = 0;
-                for(let i = 0; i < hashTable.storage[index].length; i++) {
-                    if(hashTable.storage[index][i][key] !== undefined){
-                         hashTable.storage[index].pop(index_);
-                         break;
+                for(let i = 0; i < this.storage[index].length; i++) {
+                    if(this.storage[index][i][key] !== undefined){
+                        this.storage[index].pop(index_);
+                        break;
                     }
                     index_++;
                 }
             }
         }
-        return hashTable.storage;
-    },
+        return this.storage;
+    }
+
     lookup(key) {
-        let index = hashFunction(key);
-        if (hashTable.storage[index].length === undefined) return hashTable.storage[index]
+        let index = this.hashFunction(key);
+        if (this.storage[index].length === undefined) return this.storage[index]
         else{
-            for (let i = 0; i < hashTable.storage[index].length; i++) {
-                if(hashTable.storage[index][i][key] !== undefined){
-                    return hashTable.storage[index][i]
+            for (let i = 0; i < this.storage[index].length; i++) {
+                if(this.storage[index][i][key] !== undefined){
+                    return this.storage[index][i]
                 }
             }
         }
 
         return undefined;
     }
-}
-
-hashTable.add('ba', 12)
-hashTable.add('ab', 12)
-
+};
