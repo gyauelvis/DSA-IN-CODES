@@ -13,7 +13,5 @@ int binaryToDecimal(const int binaryValue, int length, int n = 0) {
 }
 
 int main(){
-    int bin = 1001101;
-    int length = 6;
-    std::cout<<binaryToDecimal(bin, length);
+    std::cout<<binaryToDecimal(1100101001, 10);
 }
