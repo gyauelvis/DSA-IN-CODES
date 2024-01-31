@@ -31,4 +31,8 @@ If you encounter any issues or have suggestions for improvements, please open an
 
 Please note that this project follows a [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code of conduct.
 
+## License
+
+By contributing to this repository, you agree that your contributions will be licensed under the [LICENSE](LICENSE) file of this project.
+
 We appreciate your contributions and look forward to your involvement in making this project successful!

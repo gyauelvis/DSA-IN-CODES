@@ -1,11 +1,10 @@
-# DSA in Codes with C++ and JavaScript
+# DSA IN CODES
 
-This repository contains code examples and implementations of various data structures and algorithms (DSA) using C++ and JavaScript.
+This repository contains code examples and implementations of various data structures taught by DR. Emmanuel Akowah in the COE 361 class.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -13,10 +12,6 @@ This repository contains code examples and implementations of various data struc
 ## Introduction
 
 In this repository, you will find code snippets and complete implementations of common data structures and algorithms. The code is written in both C++ and JavaScript, providing examples for different programming languages.
-
-## Installation
-
-To use the code in this repository, you will need to have a C++ compiler and a JavaScript runtime environment installed on your machine. You can download and install these tools from their respective official websites.
 
 ## Usage
 
