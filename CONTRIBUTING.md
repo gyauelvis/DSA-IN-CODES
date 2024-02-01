@@ -20,8 +20,16 @@ Please follow these guidelines when contributing code:
 
 - Write clean and readable code.
 - Follow the coding style and conventions used in the project.
-- Create a new folder and give it your name and write your codes in that folder.
 - Document your code and provide clear comments where necessary.
+
+## Folder Structure
+
+
+- Traverse through the folder structure and write your code in the correct folder
+- For every algorithm or data structure, a folder has been created for it and you are supposed to write your code in the correct folder
+- Files should be named after the contributor.
+- Create folders when necessary and give it your name when necessary
+
 
 ## Issue Reporting
 
