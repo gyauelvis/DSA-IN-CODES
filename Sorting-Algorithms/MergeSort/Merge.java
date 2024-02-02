@@ -52,7 +52,7 @@ public class Merge {
         int[] arr = { 19, 2, 43, 5, 1, 3, 6,48 };
         sort(arr);
         for (int num : arr) {
-            StdOut.print(num);
+            System.out.print(num);
             System.out.print(" ");
         }
     }
