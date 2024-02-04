@@ -34,7 +34,7 @@ void quickSort(vector <int> &arr,int low,int high)
 int main()
 {
     vector <int> arr={32,41,4,1,43,2};
-    partionS(arr,arr.size()-1,0);
+    quickSort(arr,0,arr.size()-1);
     for(auto a : arr)
             cout<< a<<" ";
     cout<<endl;
