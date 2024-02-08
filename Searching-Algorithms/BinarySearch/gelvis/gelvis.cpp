@@ -1,26 +1,24 @@
-// Note binary search is only for ordered arrays
 #include <iostream>
+// implementation for binary search
+int binarySearch(int arr[], int searchValue, int arrLength)
+{
+    int lower_bound = 0, upper_bound = arrLength - 1;
 
-int binary_search(int array[], int value, int length){
-    int lower_bound = 0, upper_bound = length - 1;
-
-    while (lower_bound <= upper_bound){
-        int midpoint = (upper_bound + lower_bound)/2;
-        if(value < array[midpoint])
-            upper_bound = midpoint - 1;
-        else if(value > array[midpoint])
-            lower_bound = midpoint + 1;
+    while (lower_bound <= upper_bound)
+    {
+        int middleIndex = (lower_bound + upper_bound) / 2;
+        if (arr[middleIndex] == searchValue)
+            return middleIndex;
+        else if (arr[middleIndex] < searchValue)
+            lower_bound = middleIndex + 1;
         else
-            return midpoint;
+            upper_bound = middleIndex - 1;
     }
-
     return -1;
 }
 
-int main(){
-    int array[10] = {0,1,2,3,4,5,6,7,8,9};
-    int length = sizeof(array)/sizeof(array[0]);
-    std::cout<<binary_search(array,5,length);
-    return 0;
+int main()
+{
+    int arr[] = {1, 2, 3, 4, 5};
+    std::cout << binarySearch(arr, 2, 5) << std::endl;
 }
-

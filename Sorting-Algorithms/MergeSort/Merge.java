@@ -7,7 +7,7 @@ public class Merge {
             if (arr[i] > arr[i + 1])
                 return false;
         }
-        return true;/// this checking doesn't check for the possibility that all array are the same
+        return true;// this checking doesn't check for the possibility that all array are the same
     }
 
     public static void merge(int arr[], int aux[], int lo, int mid, int hi) {
@@ -17,7 +17,7 @@ public class Merge {
             aux[k] = arr[k];// perfom the copy operation first
         int i = lo, j = mid + 1;
 
-        /// THIS CODE CHECKS FOR ALL THE POSSIBILITIES WE MAY ENCOUNTER IN MERGING
+        // THIS CODE CHECKS FOR ALL THE POSSIBILITIES WE MAY ENCOUNTER IN MERGING
         for (int k = lo; k <= hi; k++) {
             if (i > mid) // POSSIBILITY THAT WE HAVE INCREASE THE LOW MORE THAN THE THE LEFT EDGE
                 arr[k] = aux[j++];
@@ -49,7 +49,7 @@ public class Merge {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 19, 2, 43, 5, 1, 3, 6,48 };
+        int[] arr = { 19, 2, 43, 5, 1, 3, 6, 48 };
         sort(arr);
         for (int num : arr) {
             System.out.print(num);
