@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/home/gelvis/projects/DSA-in-codes-with-Cpp-and-JavaScript/LeetCodeProblems/output/firstOccurenceSubstring",
+            "program": "/home/gelvis/projects/DSA-in-codes-with-Cpp-and-JavaScript/LeetCodeProblems/output/duplicateII",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
