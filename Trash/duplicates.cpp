@@ -20,5 +20,7 @@ bool is_contains_duplicates(std::vector<int> arr)
 int main()
 {
     std::vector<int> arr = {1, 4, 2, 5, 2, 5, 6};
+    std::string word = "aa";
+    word.su
     std::cout << is_contains_duplicates(arr) << std::endl;
 }
