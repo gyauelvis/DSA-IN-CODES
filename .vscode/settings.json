@@ -8,6 +8,18 @@
         "span": "cpp",
         "regex": "cpp",
         "utility": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "any": "cpp",
+        "charconv": "cpp",
+        "chrono": "cpp",
+        "compare": "cpp",
+        "functional": "cpp",
+        "memory_resource": "cpp",
+        "ratio": "cpp",
+        "scoped_allocator": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "variant": "cpp",
+        "string": "cpp"
     }
 }
